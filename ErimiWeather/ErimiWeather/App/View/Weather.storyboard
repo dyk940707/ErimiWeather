@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MLc-Hx-sKe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -8,24 +8,173 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MaruBuri-Bold.ttf">
+            <string>MaruBuri-Bold</string>
+        </array>
+        <array key="MaruBuri-Light.ttf">
+            <string>MaruBuri-Light</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Today Weather View Controller-->
-        <scene sceneID="s0d-6b-0kx">
+        <!--주간날씨-->
+        <scene sceneID="xHc-4U-Q3n">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="TodayWeatherViewController" customModule="ErimiWeather" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                <viewController id="nHm-E6-CjL" customClass="WeeklyWeatherViewController" customModule="ErimiWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cGY-Wi-rW7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <viewLayoutGuide key="safeArea" id="TVz-VW-6ft"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="주간날씨" image="weatherTabImg" id="SV3-lQ-7Aw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B5V-zm-ikd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="-498" y="172"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="p1A-Rz-vqg">
+            <objects>
+                <tabBarController id="MLc-Hx-sKe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CXp-Gs-Vpz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Qqf-PV-G3k" kind="relationship" relationship="viewControllers" id="JHB-e9-RGv"/>
+                        <segue destination="nHm-E6-CjL" kind="relationship" relationship="viewControllers" id="OyN-41-fAf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GlY-GM-yfq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1381" y="-180"/>
+        </scene>
+        <!--오늘날씨-->
+        <scene sceneID="yWm-yy-jcs">
+            <objects>
+                <viewController storyboardIdentifier="TodayWeatherViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Qqf-PV-G3k" customClass="TodayWeatherViewController" customModule="ErimiWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MsY-94-Plp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="현재 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hf8-9B-FvR">
+                                <rect key="frame" x="30" y="89" width="100" height="24"/>
+                                <fontDescription key="fontDescription" name="MaruBuri-Bold" family="MaruBuri" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Dmy-59-Loz">
+                                <rect key="frame" x="0.0" y="303" width="393" height="466"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="Efh-t9-b1D" customClass="WeatherListTableViewCell" customModule="ErimiWeather" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Efh-t9-b1D" id="8vc-hG-ge6">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93i-Vs-wVs">
+                                                    <rect key="frame" x="80" y="20" width="60" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="V21-DG-d00"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-C8-Lkw">
+                                                    <rect key="frame" x="160" y="20" width="39" height="20"/>
+                                                    <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-zn-1pg">
+                                                    <rect key="frame" x="20" y="10" width="40" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="dKw-LT-cvZ"/>
+                                                        <constraint firstAttribute="height" constant="40" id="fs6-ge-Zeh"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="UFh-zn-1pg" firstAttribute="leading" secondItem="8vc-hG-ge6" secondAttribute="leading" constant="20" id="KaH-9F-5Hx"/>
+                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="leading" secondItem="93i-Vs-wVs" secondAttribute="trailing" constant="20" id="ZsD-NY-fxc"/>
+                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="baseline" secondItem="lrE-C8-Lkw" secondAttribute="baseline" id="bIN-XY-RMp"/>
+                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="leading" secondItem="UFh-zn-1pg" secondAttribute="trailing" constant="20" id="sLi-em-EHe"/>
+                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="wSN-B0-nuE"/>
+                                                <constraint firstItem="UFh-zn-1pg" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="wkc-V8-wz3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="93i-Vs-wVs" id="LmE-zu-gUk"/>
+                                            <outlet property="tmpLabel" destination="lrE-C8-Lkw" id="5Xu-Xv-5Di"/>
+                                            <outlet property="weatherImageView" destination="UFh-zn-1pg" id="0BB-mj-q75"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-cloudy-100" translatesAutoresizingMaskIntoConstraints="NO" id="p8F-34-cQa">
+                                <rect key="frame" x="30" y="133" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="0Sv-rp-wXp"/>
+                                    <constraint firstAttribute="width" constant="100" id="k3W-qE-R2b"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4St-lB-7UF">
+                                <rect key="frame" x="150" y="163" width="223" height="20"/>
+                                <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rb-2G-3T7">
+                                <rect key="frame" x="150" y="203" width="223" height="20"/>
+                                <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="시간대별 날씨" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gou-ej-cOt">
+                                <rect key="frame" x="29.999999999999993" y="273" width="122.33333333333331" height="20"/>
+                                <fontDescription key="fontDescription" name="MaruBuri-Bold" family="MaruBuri" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ntw-gX-y0g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ntw-gX-y0g" firstAttribute="trailing" secondItem="4St-lB-7UF" secondAttribute="trailing" constant="20" id="4Yr-yI-HeN"/>
+                            <constraint firstItem="p8F-34-cQa" firstAttribute="top" secondItem="hf8-9B-FvR" secondAttribute="bottom" constant="20" id="5Bt-2K-47M"/>
+                            <constraint firstItem="Gou-ej-cOt" firstAttribute="leading" secondItem="ntw-gX-y0g" secondAttribute="leading" constant="30" id="DdT-8x-k0y"/>
+                            <constraint firstItem="Dmy-59-Loz" firstAttribute="leading" secondItem="ntw-gX-y0g" secondAttribute="leading" id="Df8-dV-O7B"/>
+                            <constraint firstItem="1Rb-2G-3T7" firstAttribute="top" secondItem="4St-lB-7UF" secondAttribute="bottom" constant="20" id="KKj-hN-JmA"/>
+                            <constraint firstItem="1Rb-2G-3T7" firstAttribute="leading" secondItem="4St-lB-7UF" secondAttribute="leading" id="P0A-Aq-rh7"/>
+                            <constraint firstItem="Dmy-59-Loz" firstAttribute="top" secondItem="Gou-ej-cOt" secondAttribute="bottom" constant="10" id="QV2-b4-cOh"/>
+                            <constraint firstItem="ntw-gX-y0g" firstAttribute="trailing" secondItem="1Rb-2G-3T7" secondAttribute="trailing" constant="20" id="SaT-WP-cDV"/>
+                            <constraint firstItem="4St-lB-7UF" firstAttribute="top" secondItem="p8F-34-cQa" secondAttribute="top" constant="30" id="Tvq-1X-dNb"/>
+                            <constraint firstItem="hf8-9B-FvR" firstAttribute="leading" secondItem="ntw-gX-y0g" secondAttribute="leading" constant="30" id="Xqw-o9-f15"/>
+                            <constraint firstItem="ntw-gX-y0g" firstAttribute="bottom" secondItem="Dmy-59-Loz" secondAttribute="bottom" id="ajK-lG-xYi"/>
+                            <constraint firstItem="4St-lB-7UF" firstAttribute="leading" secondItem="p8F-34-cQa" secondAttribute="trailing" constant="20" id="exB-oN-Xls"/>
+                            <constraint firstItem="ntw-gX-y0g" firstAttribute="trailing" secondItem="Dmy-59-Loz" secondAttribute="trailing" id="tZh-IV-fiN"/>
+                            <constraint firstItem="Gou-ej-cOt" firstAttribute="top" secondItem="p8F-34-cQa" secondAttribute="bottom" constant="40" id="wIh-zG-EOm"/>
+                            <constraint firstItem="p8F-34-cQa" firstAttribute="leading" secondItem="ntw-gX-y0g" secondAttribute="leading" constant="30" id="xLv-WR-xCa"/>
+                            <constraint firstItem="hf8-9B-FvR" firstAttribute="top" secondItem="ntw-gX-y0g" secondAttribute="top" constant="30" id="yi7-uK-rKK"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="오늘날씨" image="weatherTabImg" id="1sA-yL-yFo">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9V8-sY-Vd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="-472"/>
         </scene>
     </scenes>
     <resources>
+        <image name="icons8-cloudy-100" width="100" height="100"/>
+        <image name="weatherTabImg" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
