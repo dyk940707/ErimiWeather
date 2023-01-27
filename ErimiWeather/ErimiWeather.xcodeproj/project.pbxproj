@@ -13,6 +13,15 @@
 		7823760A29827DE6009B3872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7823760829827DE6009B3872 /* LaunchScreen.storyboard */; };
 		78237615298353A4009B3872 /* WeeklyWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78237614298353A4009B3872 /* WeeklyWeatherViewController.swift */; };
 		78237617298353BD009B3872 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78237616298353BD009B3872 /* Weather.storyboard */; };
+		7823761D29835BA4009B3872 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7823761C29835BA4009B3872 /* RxCocoa */; };
+		7823761F29835BA4009B3872 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7823761E29835BA4009B3872 /* RxSwift */; };
+		7823762129835BC4009B3872 /* TodayWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7823762029835BC4009B3872 /* TodayWeatherViewController.swift */; };
+		7823762429835CD6009B3872 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7823762329835CD6009B3872 /* Server.swift */; };
+		7823762D29835EA3009B3872 /* MaruBuri-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762829835EA2009B3872 /* MaruBuri-ExtraLight.ttf */; };
+		7823762E29835EA3009B3872 /* MaruBuri-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762929835EA2009B3872 /* MaruBuri-Bold.ttf */; };
+		7823762F29835EA3009B3872 /* MaruBuri-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762A29835EA3009B3872 /* MaruBuri-SemiBold.ttf */; };
+		7823763029835EA3009B3872 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762B29835EA3009B3872 /* MaruBuri-Regular.ttf */; };
+		7823763129835EA3009B3872 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762C29835EA3009B3872 /* MaruBuri-Light.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,13 @@
 		7823760B29827DE6009B3872 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78237614298353A4009B3872 /* WeeklyWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewController.swift; sourceTree = "<group>"; };
 		78237616298353BD009B3872 /* Weather.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		7823762029835BC4009B3872 /* TodayWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherViewController.swift; sourceTree = "<group>"; };
+		7823762329835CD6009B3872 /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		7823762829835EA2009B3872 /* MaruBuri-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-ExtraLight.ttf"; sourceTree = "<group>"; };
+		7823762929835EA2009B3872 /* MaruBuri-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Bold.ttf"; sourceTree = "<group>"; };
+		7823762A29835EA3009B3872 /* MaruBuri-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-SemiBold.ttf"; sourceTree = "<group>"; };
+		7823762B29835EA3009B3872 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Regular.ttf"; sourceTree = "<group>"; };
+		7823762C29835EA3009B3872 /* MaruBuri-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Light.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7823761F29835BA4009B3872 /* RxSwift in Frameworks */,
+				7823761D29835BA4009B3872 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +84,7 @@
 		782376112983522C009B3872 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				7823762229835CAB009B3872 /* Network */,
 				7823761A298358CF009B3872 /* Model */,
 				78237619298358C3009B3872 /* ViewModel */,
 				78237618298358B7009B3872 /* View */,
@@ -88,6 +107,7 @@
 		7823761329835248009B3872 /* Supported */ = {
 			isa = PBXGroup;
 			children = (
+				7823762729835E91009B3872 /* Font */,
 			);
 			path = Supported;
 			sourceTree = "<group>";
@@ -96,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				78237616298353BD009B3872 /* Weather.storyboard */,
+				7823762029835BC4009B3872 /* TodayWeatherViewController.swift */,
 				78237614298353A4009B3872 /* WeeklyWeatherViewController.swift */,
 			);
 			path = View;
@@ -115,6 +136,26 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		7823762229835CAB009B3872 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7823762329835CD6009B3872 /* Server.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		7823762729835E91009B3872 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7823762929835EA2009B3872 /* MaruBuri-Bold.ttf */,
+				7823762829835EA2009B3872 /* MaruBuri-ExtraLight.ttf */,
+				7823762C29835EA3009B3872 /* MaruBuri-Light.ttf */,
+				7823762B29835EA3009B3872 /* MaruBuri-Regular.ttf */,
+				7823762A29835EA3009B3872 /* MaruBuri-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,6 +172,10 @@
 			dependencies = (
 			);
 			name = ErimiWeather;
+			packageProductDependencies = (
+				7823761C29835BA4009B3872 /* RxCocoa */,
+				7823761E29835BA4009B3872 /* RxSwift */,
+			);
 			productName = ErimiWeather;
 			productReference = 782375FA29827DE4009B3872 /* ErimiWeather.app */;
 			productType = "com.apple.product-type.application";
@@ -159,6 +204,9 @@
 				Base,
 			);
 			mainGroup = 782375F129827DE4009B3872;
+			packageReferences = (
+				7823761B29835BA4009B3872 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 782375FB29827DE4009B3872 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -173,9 +221,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7823762F29835EA3009B3872 /* MaruBuri-SemiBold.ttf in Resources */,
 				7823760A29827DE6009B3872 /* LaunchScreen.storyboard in Resources */,
+				7823763129835EA3009B3872 /* MaruBuri-Light.ttf in Resources */,
 				78237617298353BD009B3872 /* Weather.storyboard in Resources */,
+				7823763029835EA3009B3872 /* MaruBuri-Regular.ttf in Resources */,
 				7823760729827DE6009B3872 /* Assets.xcassets in Resources */,
+				7823762E29835EA3009B3872 /* MaruBuri-Bold.ttf in Resources */,
+				7823762D29835EA3009B3872 /* MaruBuri-ExtraLight.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7823762429835CD6009B3872 /* Server.swift in Sources */,
 				782375FE29827DE4009B3872 /* AppDelegate.swift in Sources */,
 				7823760029827DE4009B3872 /* SceneDelegate.swift in Sources */,
+				7823762129835BC4009B3872 /* TodayWeatherViewController.swift in Sources */,
 				78237615298353A4009B3872 /* WeeklyWeatherViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,6 +463,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7823761B29835BA4009B3872 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7823761C29835BA4009B3872 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7823761B29835BA4009B3872 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7823761E29835BA4009B3872 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7823761B29835BA4009B3872 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 782375F229827DE4009B3872 /* Project object */;
 }
