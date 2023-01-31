@@ -69,7 +69,7 @@
                                 <rect key="frame" x="0.0" y="303" width="393" height="466"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="Efh-t9-b1D" customClass="WeatherListTableViewCell" customModule="ErimiWeather" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Cell" rowHeight="60" id="Efh-t9-b1D" customClass="TodayWeatherTableViewCell" customModule="ErimiWeather" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Efh-t9-b1D" id="8vc-hG-ge6">
@@ -166,6 +166,10 @@
                     <tabBarItem key="tabBarItem" title="오늘날씨" image="weatherTabImg" id="1sA-yL-yFo">
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="todayForecastHeadImageView" destination="p8F-34-cQa" id="J5x-Bt-fks"/>
+                        <outlet property="todayForecastTableView" destination="Dmy-59-Loz" id="lRi-Yo-Nek"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9V8-sY-Vd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
