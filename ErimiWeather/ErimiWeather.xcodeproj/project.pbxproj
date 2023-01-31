@@ -23,9 +23,9 @@
 		7823763029835EA3009B3872 /* MaruBuri-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762B29835EA3009B3872 /* MaruBuri-Regular.ttf */; };
 		7823763129835EA3009B3872 /* MaruBuri-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7823762C29835EA3009B3872 /* MaruBuri-Light.ttf */; };
 		786B36FF2983759C009B05DF /* TodayWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B36FE2983759C009B05DF /* TodayWeatherViewModel.swift */; };
-		786B3701298751AC009B05DF /* RxAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B3700298751AC009B05DF /* RxAPIManager.swift */; };
+		786B3701298751AC009B05DF /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B3700298751AC009B05DF /* APIManager.swift */; };
 		786B3709298752A6009B05DF /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 786B3708298752A6009B05DF /* RxAlamofire */; };
-		786B370B298752F9009B05DF /* RxAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B370A298752F9009B05DF /* RxAPIService.swift */; };
+		786B370B298752F9009B05DF /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B370A298752F9009B05DF /* APIService.swift */; };
 		786B370D29875CFE009B05DF /* TodayForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B370C29875CFE009B05DF /* TodayForecastModel.swift */; };
 		786B370F29876012009B05DF /* RxCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B370E29876012009B05DF /* RxCodable.swift */; };
 		786B371129876B05009B05DF /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B371029876B05009B05DF /* DateManager.swift */; };
@@ -50,8 +50,8 @@
 		7823762B29835EA3009B3872 /* MaruBuri-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Regular.ttf"; sourceTree = "<group>"; };
 		7823762C29835EA3009B3872 /* MaruBuri-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MaruBuri-Light.ttf"; sourceTree = "<group>"; };
 		786B36FE2983759C009B05DF /* TodayWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherViewModel.swift; sourceTree = "<group>"; };
-		786B3700298751AC009B05DF /* RxAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAPIManager.swift; sourceTree = "<group>"; };
-		786B370A298752F9009B05DF /* RxAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAPIService.swift; sourceTree = "<group>"; };
+		786B3700298751AC009B05DF /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		786B370A298752F9009B05DF /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		786B370C29875CFE009B05DF /* TodayForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayForecastModel.swift; sourceTree = "<group>"; };
 		786B370E29876012009B05DF /* RxCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxCodable.swift; sourceTree = "<group>"; };
 		786B371029876B05009B05DF /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				7823762329835CD6009B3872 /* Server.swift */,
-				786B3700298751AC009B05DF /* RxAPIManager.swift */,
-				786B370A298752F9009B05DF /* RxAPIService.swift */,
+				786B3700298751AC009B05DF /* APIManager.swift */,
+				786B370A298752F9009B05DF /* APIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -269,7 +269,7 @@
 			files = (
 				7823762429835CD6009B3872 /* Server.swift in Sources */,
 				782375FE29827DE4009B3872 /* AppDelegate.swift in Sources */,
-				786B370B298752F9009B05DF /* RxAPIService.swift in Sources */,
+				786B370B298752F9009B05DF /* APIService.swift in Sources */,
 				7823760029827DE4009B3872 /* SceneDelegate.swift in Sources */,
 				786B37132987B93D009B05DF /* TodayForecastListModel.swift in Sources */,
 				786B370F29876012009B05DF /* RxCodable.swift in Sources */,
@@ -277,7 +277,7 @@
 				786B36FF2983759C009B05DF /* TodayWeatherViewModel.swift in Sources */,
 				786B37152987BE88009B05DF /* TodayWeatherTableViewCell.swift in Sources */,
 				786B371129876B05009B05DF /* DateManager.swift in Sources */,
-				786B3701298751AC009B05DF /* RxAPIManager.swift in Sources */,
+				786B3701298751AC009B05DF /* APIManager.swift in Sources */,
 				7823762129835BC4009B3872 /* TodayWeatherViewController.swift in Sources */,
 				78237615298353A4009B3872 /* WeeklyWeatherViewController.swift in Sources */,
 			);
