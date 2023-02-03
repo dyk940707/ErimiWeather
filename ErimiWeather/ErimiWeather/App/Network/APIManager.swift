@@ -11,6 +11,7 @@ import RxAlamofire
 
 protocol WeatherAPIProtocol {
     func todayForecast(pageNo: Int, pageSize: Int, baseDate: String, baseTime: String, x: Double, y: Double) -> Observable<TodayForecastModel>
+    func weekForecast(pageNo: Int, pageSize: Int, regionID: String, time: String) -> Observable<WeekForecastModel>
 }
 
 class WeatherAPIManager: WeatherAPIProtocol {
@@ -24,6 +25,18 @@ class WeatherAPIManager: WeatherAPIProtocol {
                              encoding: service.encoding,
                              headers: service.header)
             .mapObject(type: TodayForecastModel.self)
+            .compactMap { $0 }
+            .debug()
+        return ob
+    }
+    
+    func weekForecast(pageNo: Int, pageSize: Int, regionID: String, time: String) -> Observable<WeekForecastModel> {
+        let service: WeatherAPIService = .getWeekForecast(pageNo: pageNo, pageSize: pageSize, regionID: regionID, time: time)
+        let ob = requestData(.get, service.url,
+                             parameters: service.param,
+                             encoding: service.encoding,
+                             headers: service.header)
+            .mapObject(type: WeekForecastModel.self)
             .compactMap { $0 }
             .debug()
         return ob
