@@ -32,6 +32,7 @@
 		786B37132987B93D009B05DF /* TodayForecastListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B37122987B93D009B05DF /* TodayForecastListModel.swift */; };
 		786B37152987BE88009B05DF /* TodayWeatherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786B37142987BE88009B05DF /* TodayWeatherTableViewCell.swift */; };
 		78DE44D9298B59070055D316 /* WeekForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE44D8298B59070055D316 /* WeekForecastModel.swift */; };
+		78DE44DB2990F32B0055D316 /* WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE44DA2990F32B0055D316 /* WeeklyWeatherViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		786B37122987B93D009B05DF /* TodayForecastListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayForecastListModel.swift; sourceTree = "<group>"; };
 		786B37142987BE88009B05DF /* TodayWeatherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWeatherTableViewCell.swift; sourceTree = "<group>"; };
 		78DE44D8298B59070055D316 /* WeekForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekForecastModel.swift; sourceTree = "<group>"; };
+		78DE44DA2990F32B0055D316 /* WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				786B36FE2983759C009B05DF /* TodayWeatherViewModel.swift */,
+				78DE44DA2990F32B0055D316 /* WeeklyWeatherViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				7823762429835CD6009B3872 /* Server.swift in Sources */,
 				782375FE29827DE4009B3872 /* AppDelegate.swift in Sources */,
 				786B370B298752F9009B05DF /* APIService.swift in Sources */,
+				78DE44DB2990F32B0055D316 /* WeeklyWeatherViewModel.swift in Sources */,
 				7823760029827DE4009B3872 /* SceneDelegate.swift in Sources */,
 				786B37132987B93D009B05DF /* TodayForecastListModel.swift in Sources */,
 				786B370F29876012009B05DF /* RxCodable.swift in Sources */,
