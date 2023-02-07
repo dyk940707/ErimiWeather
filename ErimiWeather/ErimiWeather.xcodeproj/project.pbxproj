@@ -34,6 +34,9 @@
 		78DE44D9298B59070055D316 /* WeekForecastModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE44D8298B59070055D316 /* WeekForecastModel.swift */; };
 		78DE44DB2990F32B0055D316 /* WeeklyWeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE44DA2990F32B0055D316 /* WeeklyWeatherViewModel.swift */; };
 		78DE44DD2990FE550055D316 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78DE44DC2990FE550055D316 /* LocationManager.swift */; };
+		78DE44E0299239D90055D316 /* sun.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78DE44DF299239D90055D316 /* sun.gif */; };
+		78DE44E429923D440055D316 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = 78DE44E329923D440055D316 /* Gifu */; };
+		78DE44E629923FF60055D316 /* rain.gif in Resources */ = {isa = PBXBuildFile; fileRef = 78DE44E529923FF60055D316 /* rain.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,8 @@
 		78DE44D8298B59070055D316 /* WeekForecastModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekForecastModel.swift; sourceTree = "<group>"; };
 		78DE44DA2990F32B0055D316 /* WeeklyWeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyWeatherViewModel.swift; sourceTree = "<group>"; };
 		78DE44DC2990FE550055D316 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		78DE44DF299239D90055D316 /* sun.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sun.gif; sourceTree = "<group>"; };
+		78DE44E529923FF60055D316 /* rain.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rain.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 				786B3709298752A6009B05DF /* RxAlamofire in Frameworks */,
 				7823761F29835BA4009B3872 /* RxSwift in Frameworks */,
 				7823761D29835BA4009B3872 /* RxCocoa in Frameworks */,
+				78DE44E429923D440055D316 /* Gifu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,7 @@
 		7823761329835248009B3872 /* Supported */ = {
 			isa = PBXGroup;
 			children = (
+				78DE44DE299239B50055D316 /* Gif */,
 				7823762729835E91009B3872 /* Font */,
 				786B370E29876012009B05DF /* RxCodable.swift */,
 				786B371029876B05009B05DF /* DateManager.swift */,
@@ -191,6 +198,15 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		78DE44DE299239B50055D316 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				78DE44DF299239D90055D316 /* sun.gif */,
+				78DE44E529923FF60055D316 /* rain.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +227,7 @@
 				7823761C29835BA4009B3872 /* RxCocoa */,
 				7823761E29835BA4009B3872 /* RxSwift */,
 				786B3708298752A6009B05DF /* RxAlamofire */,
+				78DE44E329923D440055D316 /* Gifu */,
 			);
 			productName = ErimiWeather;
 			productReference = 782375FA29827DE4009B3872 /* ErimiWeather.app */;
@@ -243,6 +260,7 @@
 			packageReferences = (
 				7823761B29835BA4009B3872 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				786B3707298752A6009B05DF /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				78DE44E229923D440055D316 /* XCRemoteSwiftPackageReference "Gifu" */,
 			);
 			productRefGroup = 782375FB29827DE4009B3872 /* Products */;
 			projectDirPath = "";
@@ -258,7 +276,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78DE44E0299239D90055D316 /* sun.gif in Resources */,
 				7823762F29835EA3009B3872 /* MaruBuri-SemiBold.ttf in Resources */,
+				78DE44E629923FF60055D316 /* rain.gif in Resources */,
 				7823760A29827DE6009B3872 /* LaunchScreen.storyboard in Resources */,
 				7823763129835EA3009B3872 /* MaruBuri-Light.ttf in Resources */,
 				78237617298353BD009B3872 /* Weather.storyboard in Resources */,
@@ -529,6 +549,14 @@
 				kind = branch;
 			};
 		};
+		78DE44E229923D440055D316 /* XCRemoteSwiftPackageReference "Gifu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kaishin/Gifu";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -546,6 +574,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 786B3707298752A6009B05DF /* XCRemoteSwiftPackageReference "RxAlamofire" */;
 			productName = RxAlamofire;
+		};
+		78DE44E329923D440055D316 /* Gifu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 78DE44E229923D440055D316 /* XCRemoteSwiftPackageReference "Gifu" */;
+			productName = Gifu;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

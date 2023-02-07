@@ -100,7 +100,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-zn-1pg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-zn-1pg" customClass="GIFImageView" customModule="Gifu">
                                                     <rect key="frame" x="20" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="dKw-LT-cvZ"/>
@@ -120,12 +120,12 @@
                                         <connections>
                                             <outlet property="timeLabel" destination="93i-Vs-wVs" id="LmE-zu-gUk"/>
                                             <outlet property="tmpLabel" destination="lrE-C8-Lkw" id="5Xu-Xv-5Di"/>
-                                            <outlet property="weatherImageView" destination="UFh-zn-1pg" id="0BB-mj-q75"/>
+                                            <outlet property="weatherImageView" destination="UFh-zn-1pg" id="8EB-FX-shn"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p8F-34-cQa">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p8F-34-cQa" customClass="GIFImageView" customModule="Gifu">
                                 <rect key="frame" x="30" y="133" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="0Sv-rp-wXp"/>
@@ -178,7 +178,7 @@
                     <connections>
                         <outlet property="headStateLabel" destination="4St-lB-7UF" id="O3G-YN-h8k"/>
                         <outlet property="headTmpLabel" destination="1Rb-2G-3T7" id="sm8-zA-6LI"/>
-                        <outlet property="todayForecastHeadImageView" destination="p8F-34-cQa" id="J5x-Bt-fks"/>
+                        <outlet property="todayForecastHeadImageView" destination="p8F-34-cQa" id="nCe-7v-BRe"/>
                         <outlet property="todayForecastTableView" destination="Dmy-59-Loz" id="lRi-Yo-Nek"/>
                     </connections>
                 </viewController>

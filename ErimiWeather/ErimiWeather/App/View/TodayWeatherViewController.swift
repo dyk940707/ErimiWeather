@@ -9,10 +9,12 @@ import UIKit
 import RxSwift
 import RxCocoa
 import CoreLocation
+import Gifu
 
 class TodayWeatherViewController: UIViewController {
 
-    @IBOutlet weak var todayForecastHeadImageView: UIImageView!
+    
+    @IBOutlet weak var todayForecastHeadImageView: GIFImageView!
     @IBOutlet weak var headStateLabel: UILabel!
     @IBOutlet weak var headTmpLabel: UILabel!
     @IBOutlet weak var todayForecastTableView: UITableView!
@@ -53,8 +55,13 @@ class TodayWeatherViewController: UIViewController {
     private func output() {
         // 오늘 날씨 리스트
         viewModel.todayForecastListSubject.bind(to: todayForecastTableView.rx.items(cellIdentifier: "Cell", cellType: TodayWeatherTableViewCell.self)) { row, element, cell in
-            cell.tmpLabel.text = element.tmp
-            cell.timeLabel.text = element.time
+            cell.tmpLabel.text = "\(element.tmp)°"
+            
+            var time = element.time
+            time.insert(":", at: time.index(time.endIndex, offsetBy: -2))
+            cell.timeLabel.text = time
+            cell.weatherImageView.animate(withGIFNamed: "sun")
+
         }
         .disposed(by: disposeBag)
         
