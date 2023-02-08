@@ -10,4 +10,6 @@ import Foundation
 struct TodayForecastListModel {
     var time: String
     var tmp: String
+    var state: String
+    var sky: String
 }

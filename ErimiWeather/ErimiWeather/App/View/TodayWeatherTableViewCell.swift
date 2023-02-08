@@ -11,6 +11,7 @@ import Gifu
 class TodayWeatherTableViewCell: UITableViewCell {
 
     @IBOutlet weak var weatherImageView: GIFImageView!
+    @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var tmpLabel: UILabel!
     override func awakeFromNib() {

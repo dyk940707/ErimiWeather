@@ -86,18 +86,22 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="93i-Vs-wVs">
-                                                    <rect key="frame" x="80" y="20" width="60" height="20"/>
+                                                    <rect key="frame" x="80" y="20" width="80" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="60" id="V21-DG-d00"/>
+                                                        <constraint firstAttribute="width" constant="80" id="V21-DG-d00"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-C8-Lkw">
-                                                    <rect key="frame" x="160" y="20" width="39" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="맑음" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrE-C8-Lkw">
+                                                    <rect key="frame" x="170" y="20" width="39" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="39" id="BBi-u9-Lmr"/>
+                                                        <constraint firstAttribute="height" constant="20" id="TDt-xc-THG"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" systemColor="systemRedColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFh-zn-1pg" customClass="GIFImageView" customModule="Gifu">
@@ -107,19 +111,32 @@
                                                         <constraint firstAttribute="height" constant="40" id="fs6-ge-Zeh"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnj-FN-iLt">
+                                                    <rect key="frame" x="217" y="20" width="30" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="KJk-un-R9h"/>
+                                                        <constraint firstAttribute="width" constant="30" id="c5l-Xp-W9t"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="MaruBuri-Light" family="MaruBuri" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="mnj-FN-iLt" firstAttribute="leading" secondItem="lrE-C8-Lkw" secondAttribute="trailing" constant="8" id="GxR-0B-53f"/>
                                                 <constraint firstItem="UFh-zn-1pg" firstAttribute="leading" secondItem="8vc-hG-ge6" secondAttribute="leading" constant="20" id="KaH-9F-5Hx"/>
-                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="leading" secondItem="93i-Vs-wVs" secondAttribute="trailing" constant="20" id="ZsD-NY-fxc"/>
-                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="baseline" secondItem="lrE-C8-Lkw" secondAttribute="baseline" id="bIN-XY-RMp"/>
-                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="leading" secondItem="UFh-zn-1pg" secondAttribute="trailing" constant="20" id="sLi-em-EHe"/>
-                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="wSN-B0-nuE"/>
+                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="leading" secondItem="93i-Vs-wVs" secondAttribute="trailing" constant="10" id="ZsD-NY-fxc"/>
+                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="age-Lw-cQ5"/>
+                                                <constraint firstItem="mnj-FN-iLt" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="iQ2-oy-mH0"/>
+                                                <constraint firstItem="93i-Vs-wVs" firstAttribute="leading" secondItem="UFh-zn-1pg" secondAttribute="trailing" constant="20" id="trg-7M-VuG"/>
+                                                <constraint firstItem="lrE-C8-Lkw" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="vmg-j9-QEX"/>
                                                 <constraint firstItem="UFh-zn-1pg" firstAttribute="centerY" secondItem="8vc-hG-ge6" secondAttribute="centerY" id="wkc-V8-wz3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="stateLabel" destination="lrE-C8-Lkw" id="Zaw-5g-Xzc"/>
                                             <outlet property="timeLabel" destination="93i-Vs-wVs" id="LmE-zu-gUk"/>
-                                            <outlet property="tmpLabel" destination="lrE-C8-Lkw" id="5Xu-Xv-5Di"/>
+                                            <outlet property="tmpLabel" destination="mnj-FN-iLt" id="DN2-lw-45N"/>
                                             <outlet property="weatherImageView" destination="UFh-zn-1pg" id="8EB-FX-shn"/>
                                         </connections>
                                     </tableViewCell>
@@ -184,13 +201,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9V8-sY-Vd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="-472"/>
+            <point key="canvasLocation" x="-498.47328244274809" y="-472.53521126760563"/>
         </scene>
     </scenes>
     <resources>
         <image name="weatherTabImg" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
