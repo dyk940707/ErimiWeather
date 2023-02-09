@@ -51,19 +51,58 @@ class TodayWeatherViewModel {
             var todayFo: [TodayForecastListModel] = []
             for i in response.indices {
                 if response[i].category == "TMP" {
-                    todayFo.append(TodayForecastListModel(time: response[i].fcstTime ?? "", tmp: response[i].fcstValue ?? ""))
+                    todayFo.append(TodayForecastListModel(time: response[i].fcstTime ?? "", tmp: response[i].fcstValue ?? "", state: "", sky: ""))
                 }
+            }
+            var todayState: [String] = []
+            var todaySky: [String] = []
+            
+            for h in response.indices {
+                if response[h].category == "PTY" {
+                    print("날씨타입")
+                    todayState.append(response[h].fcstValue ?? "")
+                }
+            }
+            for o in response.indices {
+                if response[o].category == "SKY" {
+                    print("하늘타입")
+                    todaySky.append(response[o].fcstValue ?? "")
+                }
+            }
+            
+            for k in todayFo.indices {
+                switch todayState[k] {
+                case "1":
+                    todayState[k] = "비"
+                case "2":
+                    todayState[k] = "비/눈"
+                case "3":
+                    todayState[k] = "눈"
+                case "4":
+                    todayState[k] = "소나기"
+                default:
+                    todayState[k] = ""
+                }
+                todayFo[k].state = todayState[k]
+                
+                switch todaySky[k] {
+                case "1":
+                    todaySky[k] = "맑음"
+                case "3":
+                    todaySky[k] = "구름많음"
+                case "4":
+                    todaySky[k] = "흐림"
+                default:
+                    todaySky[k] = ""
+                }
+                todayFo[k].sky = todaySky[k]
+
+                
+                print(todayState)
+                print(todayFo)
             }
             self.todayForecastListSubject.onNext(todayFo)
-            
-            var todayType: [String] = []
 
-            for p in response.indices {
-                if response[p].category == "PTY" {
-                    todayType.append(response[p].fcstValue!)
-                }
-            }
-            self.todayForecastTypeListSubject.onNext(todayType)
         }
         .disposed(by: disposeBag)
     }
